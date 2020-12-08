@@ -1,2 +1,2 @@
 # trillo
-Flexbox - Hotel Planner Website
+Flexbox, Sass, CSS animations - Hotel Planner - Website
