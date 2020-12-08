@@ -1,0 +1,269 @@
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+
+    // direct children
+    & > * {
+        padding: 0 rem(20);
+        cursor: pointer;
+        height: 100%;
+        @include transition;
+
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__bookmark-icon,
+    &__msg-icon {
+        position: relative;
+    }
+
+    &__icon {
+        @include same-dim(rem(22.5));
+        fill: var(--color-grey-dark-2);
+    }
+
+    &__notification {
+        font-size: rem(8);
+        @include same-dim(rem(17.5));
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        position: absolute;
+        top: rem(15);
+        right: rem(11);
+
+        // align the text with flex
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // USER PROFILE
+    &__user-photo {
+        // @include same-dim(37.5);
+        height: rem(37.5);
+        border-radius: 50%;
+        margin-right: rem(10);
+    }
+
+    &__user {
+        position: relative;
+    }
+
+    &__user-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+        visibility: hidden;
+        opacity: 0;
+
+        width: 100%;
+        height: auto;
+        position: absolute;
+        background-color: var(--color-grey-light-2);
+        top: 0;
+        left: 0;
+
+        @include transition;
+
+        @media only screen and (max-width: $bp-500) {
+            top: rem(40);
+        }
+
+    }
+
+    &__user:hover &__user-container {
+        z-index: 20;
+        top: rem(70);
+
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__user-menu {
+        display: flex;
+        flex: 1;
+        align-items: center;
+
+        position: relative;
+        z-index: 50;
+
+        padding: rem(15);
+        @include transition;
+
+        &:not(:last-child) {
+            border-bottom: var(--line);
+        }
+
+        &:hover > * {
+            fill: var(--color-white);
+            color: var(--color-white);
+            transition: color 1.5s, fill 1.5s;
+        }
+
+        &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: rem(3);
+            background-color: var(--color-primary);
+            transform: scaleY(0);
+            transition: transform .2s,
+                        width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                        background-color .1s;
+    
+        }
+    
+        &:hover::before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+    
+        &:active::before {
+            background-color: var(--color-primary-light);
+        }
+
+    }
+
+    &__menu-icon {
+        @include same-dim(rem(15));
+        fill: var(--color-grey-dark-2);
+        margin-right: rem(5);
+
+    }
+
+    // MSG ICON
+    &__msg-icon {
+        position: relative;
+    }
+
+    &__msg-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+        visibility: hidden;
+        opacity: 0;
+
+        font-size: rem(12);
+        height: auto;
+        position: absolute;
+        background-color: var(--color-grey-light-2);
+        top: 0;
+        left: rem(-155);
+
+        @include transition;
+
+        @media only screen and (max-width: $bp-500) {
+            top: rem(40);
+        }
+
+    }
+
+    &__msg-container--active {
+        z-index: 20;
+        top: rem(70);
+
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__msg-menu {
+        display: flex;
+        align-items: center;
+
+        width: rem(330);
+        padding: rem(15);
+        @include transition;
+
+        position: relative;
+        z-index: 50;
+
+        &:not(:last-child) {
+            border-bottom: var(--line-dark);
+        }
+
+        &:hover > * {
+            color: var(--color-white) !important;
+            transition: color 1.5s;
+        }
+
+        &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: rem(3);
+            background-color: var(--color-primary);
+            transform: scaleY(0);
+            transition: transform .2s,
+                        width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                        background-color .1s;
+    
+        }
+    
+        &:hover::before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+    
+        &:active::before {
+            background-color: var(--color-primary-light);
+        }
+
+    }
+
+    &__msg-menu:hover .btn-inline--msg {
+        color: var(--color-white);
+        transition: color 1.5s;
+    }
+
+    &__msg-photo {
+        height: rem(37.5);
+        border-radius: 50%;
+        margin-right: rem(10);
+
+    }
+
+    &__msg-chat {
+        padding: 0 rem(10);
+    }
+
+    &__msg-name {
+        font-weight: 700;
+        margin-bottom: rem(3);
+    }
+
+    &__msg-txt {
+        
+    }
+
+    &__msg-date {
+        margin-left: rem(10);
+        flex: 1;
+    }
+
+    &__msg-btn {
+        font-size: rem(14);
+        margin: 0 auto;
+
+    }
+
+
+
+}

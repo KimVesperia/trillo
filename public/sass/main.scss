@@ -1,0 +1,31 @@
+// order must be the same as in the dir tree
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/cta";
+@import "components/gallery";
+@import "components/list";
+@import "components/overview";
+@import "components/paragraph";
+@import "components/recommend";
+@import "components/reviews";
+@import "components/search";
+@import "components/side-nav";
+@import "components/user-nav";
+
+@import "layout/container";
+@import "layout/content";
+@import "layout/detail";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/hotel-view";
+@import "layout/sidebar";
+
+@import "pages/home";

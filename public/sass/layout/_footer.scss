@@ -1,0 +1,13 @@
+// FOOTER
+.footer {
+    display: none;
+    background-color: var(--color-grey-dark-1);
+    font-size: rem(12);
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: rem(25);
+
+    @media only screen and (max-width: $bp-900) {
+        display: inherit;
+    }
+}

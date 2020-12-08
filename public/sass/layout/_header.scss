@@ -1,0 +1,28 @@
+// Header
+.header {
+    font-size: rem(14);
+    height: rem(70);
+    background-color: var(--color-white);
+    border-bottom: var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-500) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: rem(110);
+    }
+
+    &__logo {
+        height: rem(32.5);
+        margin-left: rem(20);
+        backface-visibility: hidden;
+        
+        &:hover {
+            animation: pulsate-1 2s infinite;
+        }
+    }
+}
+

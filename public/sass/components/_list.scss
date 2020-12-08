@@ -1,0 +1,42 @@
+// List
+.list {
+    list-style: none;
+    margin: rem(30) 0;
+    border-top: var(--line);
+    padding: rem(30) 0;
+    border-bottom: var(--line);
+
+    display: flex;
+    // newline for every element
+    flex-wrap: wrap;
+
+    &__item {
+        // 2 columns/side by side
+        flex: 0 0 50%;
+        margin-bottom: rem(7);
+    }
+
+    // svg arrow icon
+    &__item:before {
+        content: "";
+        display: inline-block;
+        // size
+        @include same-dim(rem(10));
+        margin-right: rem(7);
+
+        // Older browsers
+        background-image: url(../img/svg/chevron-thin-right.svg);
+        background-size: cover;
+
+        // Feature querie
+        // Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            // clip the icon and apply the background color
+            mask-image: url(../img/svg/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+
+    }
+}

@@ -1,0 +1,39 @@
+// Base
+
+/* universal selector */
+/* all elements + all pseudo elements */
+*,
+*::after,
+*::before {
+    /* remove all the default margins and paddings */
+    margin: 0;
+    padding: 0;
+    /* inherit from html and apply everywhere  */
+    box-sizing: inherit;
+}
+
+html {
+    /* borders and paddings removed from width and height  */
+    box-sizing: border-box;
+    // this defines what 1rem is
+    /* root font size */
+    /* 1rem = 10px */
+    /* font-size: 10px; */
+    /* use % better for users accessibility */
+    /* 10px we want this/16px default = 0,625 * 100 = 62.5% */
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-1100) {
+        font-size: 50%;
+    }
+}
+
+/* inheritance inside body */
+body {
+    color: var(--color-grey-dark-2);
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}

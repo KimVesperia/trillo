@@ -1,0 +1,11 @@
+// Sidebar - Navigation
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+
+    // GROW - SHRINK - BASIS (ITEM - WIDTH)
+    flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

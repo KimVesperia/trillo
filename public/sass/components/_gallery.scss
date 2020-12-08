@@ -1,0 +1,102 @@
+// gallery
+.gallery {
+    display: flex;
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__item:hover &__photo {
+        filter: brightness(50%);
+    }
+
+    &__item:hover &__caption {
+        transform: translate(-50%, -50%);
+        @include visible;
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &__caption {
+        font-size: rem(14);
+        text-align: center;
+        color: var(--color-white);
+        font-weight: 300;
+
+        transition: all .5s;
+
+        @include hidden;
+        @include absolute-center;
+        transform: translate(-50%, 25%);
+
+        display: flex;
+
+        @media only screen and (max-width: $bp-500) {
+            font-size: rem(12);
+            width: 100%;
+        }
+    }
+
+    // svg quote
+    &__caption:before {
+        content: "";
+        align-self: flex-start;
+        // size
+        padding: rem(10);
+
+        // Older browsers
+        background-image: url(../img/svg/quote.svg);
+        background-size: cover;
+        transform: rotate(180deg);
+
+        // Feature querie
+        // Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            // clip the icon and apply the background color
+            mask-image: url(../img/svg/quote.svg);
+            mask-size: cover;
+            background-image: none;
+            transform: rotate(180deg);
+        }
+
+        @media only screen and (max-width: $bp-500) {
+            @include hidden;
+        }
+
+    }
+
+        // svg quote
+        &__caption:after {
+            content: "";
+            align-self: flex-end;
+            // size
+            padding: rem(10);
+            // margin-left: rem(5);
+    
+            // Older browsers
+            background-image: url(../img/svg/quote.svg);
+            background-size: cover;
+    
+            // Feature querie
+            // Newer browsers - masks
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: var(--color-primary);
+                // clip the icon and apply the background color
+                mask-image: url(../img/svg/quote.svg);
+                mask-size: cover;
+                background-image: none;
+            }
+
+            @media only screen and (max-width: $bp-500) {
+                @include hidden;
+            }
+    
+        }
+}

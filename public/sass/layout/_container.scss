@@ -1,0 +1,15 @@
+// Container
+.container {
+    max-width: rem(1200);
+    margin: rem(80) auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--box-shadow-dark);
+
+    min-height: rem(500);
+
+    @media only screen and (max-width: $bp-1200) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}

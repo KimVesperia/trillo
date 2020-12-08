@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Instruct Internet Explorer to use its latest rendering engine -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- scale for all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>trillo &mdash; Your all-in-one booking app</title>
+                
+        <!-- 160 characters max -->
+        <meta name="description" content="Like to travel? Let trillo plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from trillo.">
+        <meta name="keywords" content="travel, booking, all-in-one"> 
+        
+        <meta name="robots" content="follow">
+
+        <!-- makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing. 
+        https://necolas.github.io/normalize.css/ -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+        
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <!-- The header is the first section and contains introductory content or links. -->
+            <!-- BEM methodology -->
+            <header class="header">
+                <a href="#" class="js--reload">
+                    <img src="img/logo.png" alt="trillo logo" class="header__logo">
+                </a>
+
+                <form action="#" class="search" autocomplete="off">
+                    <input type="text" class="search__input" id="myInput" placeholder="Search hotels around the world">
+                    <button class="search__btn">
+                        <!-- SVG -->
+                        <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <nav class="user-nav">
+
+                    <div class="user-nav__bookmark-icon">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">7</span>
+                    </div>
+
+                    <div class="user-nav__msg-icon">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">4</span>
+
+                        <ul class="user-nav__msg-container">
+
+                            <li class="user-nav__msg-menu">
+                                <img src="img/user-3.jpg" alt="Friend 1" class="user-nav__msg-photo">
+
+                                <div class="user-nav__msg-chat">
+                                    <div class="user-nav__msg-name">Cloud Strife</div>
+                                    <p class="user-nav__msg-txt">I heard good reviews about this hotel.</p>
+                                </div>
+
+                                <span class="user-nav__msg-date">Today, 14:25</span>
+                            </li>
+                        
+                            <li class="user-nav__msg-menu">
+                                <img src="img/user-4.jpg" alt="Friend 2" class="user-nav__msg-photo">
+
+                                <div class="user-nav__msg-chat">
+                                    <div class="user-nav__msg-name">Barret Wallace</div>
+                                    <p class="user-nav__msg-txt">We should go to Portugal next time!</p>
+                                </div>
+
+                                <span class="user-nav__msg-date">August 14th, 2020</span>
+                            </li>
+
+                            <li class="user-nav__msg-menu">
+                                <div class="user-nav__msg-btn">
+                                    <button class="btn-inline btn-inline--msg">View all messages <span>&rarr;</span></button>
+                                </div>
+                            </li>
+                            
+                        </ul>
+
+                    </div>
+
+                    <div class="user-nav__user">
+                        <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">Kim</span>
+
+                        <ul class="user-nav__user-container">
+
+                            <li class="user-nav__user-menu">
+                                <svg class="user-nav__menu-icon">
+                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                </svg>
+                                <span class="user-nav__menu-option">Settings</span>
+                            </li>
+                        
+                            <li class="user-nav__user-menu">
+                                <svg class="user-nav__menu-icon">
+                                    <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                                </svg>
+                                <span class="user-nav__menu-option">Logout</span>
+                            </li>
+                            
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+            </header>
+
+            <div class="content">
+
+                <!-- nav -->
+                <nav class="sidebar">
+                    <ul class="side-nav">
+
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Hotel</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                                <span>Flight</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span>Car rental</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                                </svg>
+                                <span>Tours</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <footer class="legal">
+                        Copyright &copy; 2020 by Kim Phung. All rights reserved.
+                    </footer>
+                </nav>
+
+                <main class="hotel-view">
+
+                    <div class="gallery">
+                        <figure class="gallery__item">
+                            <img src="img/hotel-1-min.jpg" alt="Photo of hotel 1" class="gallery__photo">
+                            <figcaption class="gallery__caption">&nbsp; Time is a pool to swim and dream and create in.</figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/hotel-2-min.jpg" alt="Photo of hotel 2" class="gallery__photo">
+                            <figcaption class="gallery__caption">&nbsp; Act the way that you want to feel.</figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/hotel-3-min.jpg" alt="Photo of hotel 3" class="gallery__photo">
+                            <figcaption class="gallery__caption">&nbsp; Always take the scenic route.</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="overview">
+                        <h1 class="overview__heading">
+                            Hotel AMS Arena
+                        </h1>
+                        <div class="overview__stars">
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                        </div>
+
+                        <div class="overview__location">
+                            <svg class="overview__icon-location">
+                                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                            </svg>
+                            <button class="btn-inline">
+                                Amsterdam, Netherlands
+                            </button>
+                        </div>
+
+                        <div class="overview__rating">
+                            <div class="overview__rating-average">8.6</div>
+                            <div class="overview__rating-count">429 votes</div>
+                        </div>
+
+                    </div>
+
+                    <div class="detail">
+
+                        <div class="description">
+                            
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+                            </p>
+                            <p class="paragraph">
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                            </p>
+
+                            <ul class="list">
+                                <li class="list__item">Close to the beach</li>
+                                <li class="list__item">Breakfast included</li>
+                                <li class="list__item">Free airport shuttle</li>
+                                <li class="list__item">Free wifi in all rooms</li>
+                                <li class="list__item">Air conditioning and heating</li>
+                                <li class="list__item">Pets allowed</li>
+                                <li class="list__item">We speak all languages</li>
+                                <li class="list__item">Perfect for families</li>
+                            </ul>
+
+                            <div class="recommend">
+                                <p class="recommend__count">
+                                    Lucy and 3 other friends recommend this hotel.
+                                </p>
+                                <div class="recommend__friends">
+                                    <img src="img/user-3.jpg" alt="Friend 1" class="recommend__photo">
+                                    <img src="img/user-4.jpg" alt="Friend 2" class="recommend__photo">
+                                    <img src="img/user-5.jpg" alt="Friend 3" class="recommend__photo">
+                                    <img src="img/user-6.jpg" alt="Friend 4" class="recommend__photo">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="user-reviews">
+                            <!-- figures for reviews -->
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+                                </blockquote>
+                                <figcaption class="review__user">
+                                    <img src="img/user-1.jpg" alt="User 1" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Nick Smith</p>
+                                        <p class="review__user-date">Feb 23rd, 2020</p>
+                                    </div>
+                                    <div class="review__rating">7.8</div>
+                                </figcaption>
+                            </figure>
+
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+                                </blockquote>
+                                <figcaption class="review__user">
+                                    <img src="img/user-2.jpg" alt="User 2" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Mary Thomas</p>
+                                        <p class="review__user-date">Sept 13th, 2020</p>
+                                    </div>
+                                    <div class="review__rating">9.3</div>
+                                </figcaption>
+                            </figure>
+
+                            <button class="btn-inline">Show all <span>&rarr;</span></button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cta">
+                        <h2 class="cta__book-now">
+                            Good news! We have 4 free rooms for your selected dates!
+                        </h2>
+                        <button class="btn">
+                            <span class="btn__visible">Book now</span>
+                            <span class="btn__invisible">Only 4 rooms left</span>
+                        </button>
+                    </div>
+
+                </main>
+
+            </div>
+        
+            <!-- only for small screen -->
+            <footer class="footer">
+                Copyright &copy; 2020 by Kim Phung. All rights reserved.
+            </footer>
+
+        </div>
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/8.1.2/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+			 https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+
+        <!-- scripts -->
+        <!-- jQuery - google cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- html5 and css3 for older browsers fix -->
+        <!-- https://www.jsdelivr.com/ -->
+        <!-- min/max-width media query polyfill -->
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+
+        <!-- The HTML5 Shiv enables use of HTML5 sectioning elements in legacy browsers -->
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        
+        <!-- selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes - IE 6-8 -->
+        <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+        
+        <!-- sticky jquery plugin 
+        <script src="js/jquery.waypoints.min.js"></script> -->
+
+        <!-- custom js minified -->
+        <script src="js/script.js"></script>
+
+        
+    </body>
+</html>

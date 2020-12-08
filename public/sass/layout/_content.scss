@@ -1,0 +1,8 @@
+// Content
+.content {
+    display: flex;
+    
+    @media only screen and (max-width: $bp-900) {
+        flex-direction: column;
+    }
+}
